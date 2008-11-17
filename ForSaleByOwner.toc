@@ -1,0 +1,9 @@
+## Interface: 20300
+
+## Title: For Sale By Owner
+## Notes: Addon to sum all posted auctions for Bid and Buyout price and integrate into Auction Frame
+## Version: Alpha
+## Author: Dracos99
+## SavedVariables: ForSaleByOwnerDB
+
+ForSaleByOwner.lua
