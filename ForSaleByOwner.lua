@@ -35,9 +35,11 @@ frame:SetScript("OnEvent", function(self, event, addon)
 			local sum = 0
 			for i in pairs(chardb) do chardb[i] = nil end
 			for i = 1,GetNumAuctionItems("owner") do
-				local name, _, _, _, _, _, _, _, buyout = GetAuctionItemInfo("owner", i)
-				chardb[name] = (chardb[name] or 0) + 1
-				sum = sum + buyout
+				local name, _, _, _, _, _, _, _, buyout, _, _, _, sold = GetAuctionItemInfo("owner", i)
+				if sold == 0 then
+					chardb[name] = (chardb[name] or 0) + 1
+					sum = sum + buyout
+				end
 			end
 			textframe:SetText(GS(sum) or "ERROR")
 		end
