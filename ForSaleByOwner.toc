@@ -6,4 +6,9 @@
 ## Author: Dracos99
 ## SavedVariables: ForSaleByOwnerDB
 
+IDMemo.lua
+GSC.lua
+
+Events.lua
+SavedVars.lua
 ForSaleByOwner.lua
