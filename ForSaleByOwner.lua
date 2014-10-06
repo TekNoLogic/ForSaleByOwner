@@ -51,8 +51,8 @@ ns.RegisterEvent('AUCTION_HOUSE_SHOW', function()
 		local sum, soldsum = 0, 0
 		wipe(ns.chardb)
 		for i = 1,GetNumAuctionItems("owner") do
-			local _, _, _, _, _, _, _, _, _, buyout, bidAmount, _, _, sold, itemID
-				= GetAuctionItemInfo("owner", i)
+			local _, _, _, _, _, _, _, _, _, buyout, bidAmount, _, _, _, _, sold,
+			      itemID = GetAuctionItemInfo("owner", i)
 
 			if sold == 0 then
 				ns.chardb[itemID] = (ns.chardb[itemID] or 0) + 1
